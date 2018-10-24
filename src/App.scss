@@ -1,0 +1,27 @@
+
+.container {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .calculator {
+        position: relative;
+        text-align: center;
+        height: fit-content;
+        border: 1px solid #02285c;
+        border-radius: 3px;
+        margin: 2em;
+        padding: 1em 0 1em 2em;
+        #display {
+            width: fit-content;
+            border-radius: 3px;
+            margin: .1em;
+        }
+        .btn {
+            margin: .1em; 
+            padding: 1em;
+        }
+    }
+
+
+}
