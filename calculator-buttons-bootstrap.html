@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<form className="container text-center" id="calculator">
+          <div className="calculator text-center">
+            <div className="row">
+                <input type="text" 
+                name="display" className="col-9" id="display" disabled></input>
+            </div>
+            <div className="row">
+                <input type="button" className="btn col-1" id="one" value="1" onClick={this.enterValue}></input>
+                <input type="button" className="btn col-1" id="two" value="2" onClick={this.enterValue}></input>
+                <input type="button" className="btn col-1" id="three" value="3" onClick={this.enterValue}></input>  
+                <input type="button" className="operator btn btn-warning col-3" id="add" data-action="add" value="+" onClick={this.mathOperation}></input>
+            </div>
+            <div className="row">
+                <input type="button" className="btn col-1" id="four" value="4" onClick={this.enterValue}></input>
+                <input type="button" className="btn col-1" id="five" value="5" onClick={this.enterValue}></input>
+                <input type="button" className="btn col-1" id="six" value="6" onClick={this.enterValue}></input>  
+                <input type="button" className="operator btn btn-warning col-3" data-action="subtract" id="subtract" value="-" onClick={this.mathOperation}></input>
+            </div>
+            <div className="row">
+                <input type="button" className="btn col-1" id="seven" value="7" onClick={this.enterValue}></input>
+                <input type="button" className="btn col-1" id="eight" value="8" onClick={this.enterValue}></input>
+                <input type="button" className="btn col-1" id="nine" value="9" onClick={this.enterValue}></input>  
+                <input type="button" className="operator btn btn-warning col-3" name="times" data-action="multiply" id="multiply" value="*" onClick={this.mathOperation}></input>
+            </div>
+            <div className="row">
+                <input type="button" className="btn col-4" id="zero" value="0" onClick={this.enterValue}></input>
+                <input type="button" className="btn col-1" data-action="decimal" id="decimal" value="." onClick={this.enterValue}></input>  
+                <input type="button" className="operator btn btn-warning col-3" name="divide" data-action="divide" id="divide" value="/" onClick={this.mathOperation}></input>
+            </div>
+            <div className="row">
+            <input type="button" className="btn btn-danger col-4" data-action="clear" id="clear" value="C" onClick={this.clearValue}></input>
+            <input type="button" className="btn btn-success col-5" data-action="calculate" id="equals" value="=" onClick={this.calcValue}></input>    
+            </div>
+          </div>
+        </form>
