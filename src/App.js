@@ -7,7 +7,7 @@ class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      operations: [],
+      operations: ['0'],
     }
   this.handleClick = this.handleClick.bind(this);
   this.calculateOperations = this.calculateOperations.bind(this);
@@ -19,7 +19,7 @@ calculateOperations() {
     result = math.eval(result);
     result = math.format(result, {precision: 14})
     result = String(result)
-    this.setState = ({
+    this.setState({
       operations: [result]
     })
   }
@@ -30,7 +30,7 @@ handleClick(event) {
     switch (value) {
       case "clear":
       this.setState({
-        operations: []
+        operations: ['0']
       });
       break;
 
@@ -52,6 +52,7 @@ handleClick(event) {
   render () {
     return ( 
     <div className="container text-center">
+          <h1 className="header">JAVASCRIPT CALCULATOR</h1>
       <div className="calculator">
         <Display data={this.state.operations} />
         <Buttons>
